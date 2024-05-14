@@ -1,9 +1,6 @@
-
-
 from pathlib import Path
-from dotenv import load_dotenv
 import os
-
+from dotenv import load_dotenv
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,10 +34,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # extensions
     'import_export',
+
     # apps
     'customers',
     'products',
     'billing',
+    # framework
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -96,10 +97,6 @@ DATABASES = {
         "PORT": os.getenv("PORT"),
     }
 }
-
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
